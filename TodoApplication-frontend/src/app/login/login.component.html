@@ -1,0 +1,20 @@
+<h1>Login Page</h1>
+<div style="text-align: center;">
+    <table>
+        <tr>
+            <td>UserName</td>
+            <td><input type="text" name="userName" [(ngModel)]="userName" style="text-align: center;"/></td>
+        </tr><br>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="password" [(ngModel)]="password" style="text-align: center;"/></td>
+        </tr><br>
+        <tr>
+            <td><button (click)=handleLogin() class="btn btn-success">Login</button></td>
+            <td><button (click)=resetFields() class="btn btn-danger">Reset</button></td>
+        </tr><br>
+    </table>
+</div><br><br><br>
+<div class="container">
+    <small *ngIf="invalid" class="alert alert-warning" style="text-align: center;">{{errorMessage}}</small>
+</div>

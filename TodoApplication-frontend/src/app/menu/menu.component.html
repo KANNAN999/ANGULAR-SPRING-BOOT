@@ -1,0 +1,14 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark"> 
+    <div><a routerLink="https://www.KV.com" class="navbar-brand">KV</a></div>
+<ul class="navbar-nav">
+  <li><a routerLink="/welcome/kannan" class="nav-link" *ngIf="service.isUserLoggedIn()">Home</a></li>
+  <li><a routerLink="/todos" class="nav-link" *ngIf="service.isUserLoggedIn()">Todo's</a></li>
+</ul>
+
+<ul class="navbar-nav navbar-collapse justify-content-end">
+  <li><a routerLink="/login" class="nav-link" *ngIf="!service.isUserLoggedIn()">Login</a></li>
+  <li><a routerLink="/logout" class="nav-link" *ngIf="service.isUserLoggedIn()">Logout</a></li>
+</ul>
+  </nav>
+  </header>
